@@ -2470,6 +2470,12 @@ firmware_class.path=/vendor/firmware loop.max_part=7";
 #include "mediatek/cust_mt6739_msdc.dtsi"
 #include "mediatek/trusty.dtsi"
 
+#ifdef CONFIG_MTK_PMIC_CHIP_MT6357
+#include "mediatek/mt6357.dtsi"
+#else
+#include "mediatek/mt6356.dtsi"
+#endif
+
 #ifdef CONFIG_CHARGER_RT9458
 #include "mediatek/rt9458.dtsi"
 #endif
